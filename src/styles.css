@@ -9,6 +9,12 @@
   display: flex;
   align-items: center;
 }
+.tableView:nth-child(odd) {
+  background-color: #fff;
+}
+.tableView:nth-child(even) {
+  background-color: #fafafa;
+}
 .link-unstyled, .link-unstyled:link, .link-unstyled:hover {
   color: inherit;
   text-decoration: inherit;
@@ -38,10 +44,10 @@
   font-size: x-large;
 }
 #navigationBar {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
 }
 #home, #skills, #socials, #projects, #policy, #notfound {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
 }
 @media (min-width: 1200px) {
   .w-xl-100 {

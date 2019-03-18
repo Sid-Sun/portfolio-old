@@ -10,7 +10,8 @@ export class SocialComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.socials = $.getJSON('https://eowyn.strangebits.co.in/social.json', (data) => {
+    window.scrollTo(0, 0);
+    this.socials = $.getJSON('https://cdn.sidsun.com/social.json', (data) => {
       return data;
     });
     $(document).ready(() => {

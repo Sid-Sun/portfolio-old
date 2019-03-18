@@ -13,7 +13,7 @@
           <h2>{{ skill.name }}</h2>
           <div class="container my-3">
             <div class="row">
-                <a class="col-sm-auto shadow-sm bg-white link-unstyled m-md-2 skillDiv" *ngFor="let localSkill of skill.skills" href="{{ localSkill.href }}" target="_blank">
+                <a class="col-sm-auto shadow-sm bg-white link-unstyled m-md-2 skillDiv" *ngFor="let localSkill of skill.skills" [href]="localSkill.href" target="_blank">
                     <p class="m-3 ">{{ localSkill.name }}</p>
                 </a>
             </div>

@@ -1,21 +1,21 @@
 <div id="home">
-  <header class="bg-white text-black-75 py-5" id="intro">
+  <header class="tableView text-black-75 py-5" id="intro">
     <div class="text-center">
       <div class="container text-center align-content-center">
-        <h2>Introducing; Me.</h2>
-        <h3>Sid Sun (Sidharth Soni)</h3>
-        <h3>Developer</h3>
+        <h2>{{ data.responseJSON.header.intro }}</h2>
+        <h3>{{ data.responseJSON.header.name }}</h3>
+        <h3>{{ data.responseJSON.header.title }}</h3>
         <br>
-          <p class="text-center h4 ml-auto mr-auto w-lg-75 w-md-75 w-sm-100">“{{ quote.responseJSON.quotes[random] }}”</p>
+        <p class="text-center h4 ml-auto mr-auto w-lg-75 w-md-75 w-sm-100">“{{ data.responseJSON.header.quotes[random] }}”</p>
       </div>
     </div>
   </header>
-  <div id="objective" class="py-5 bg-light-secondary">
+  <div id="objective" class="py-5 tableView" *ngFor="let div of data.responseJSON.body">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>Objective</h2>
-          <p class="lead">{{ data.responseJSON.objective }}</p>
+          <h2>{{ div.title }}</h2>
+          <p class="lead">{{ div.text }}</p>
         </div>
       </div>
     </div>

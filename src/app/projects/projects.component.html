@@ -1,51 +1,29 @@
 <div id="projects">
-  <header class="bg-white text-black-75 py-5">
+  <header class="bg-white text-black-75 py-5 tableView">
     <div class="text-center">
       <div class="container text-center align-content-center">
         <p class="w-100 w-md-75 mx-auto"> <span class="h4">I believe learning is not enough; <span class="h3">Queen Elizabeth II</span> put it best: <span class="h3">“It's all to do with the training: you can do a lot if you're properly trained”.</span></span></p>
       </div>
     </div>
   </header>
-  <div class="py-5" *ngFor="let project of projects.responseJSON; let index=index; let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
+  <div class="py-5 tableView" *ngFor="let project of projects.responseJSON;">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2 class="pb-2">{{ project.name }}</h2>
           <h4 class="pb-3">{{ project.description }}</h4>
-          <h3>Developed with:</h3>
-          <div class="container my-3">
-            <div class="row">
-              <a class="col-sm-auto shadow-sm bg-white link-unstyled m-md-2 skillDiv" *ngFor="let tools of project.developmentTools" href="{{ tools.href }}" target="_blank">
-                <p class="m-3 ">{{ tools.name }}</p>
-              </a>
-            </div>
-          </div>
-          <h3 class="mt-4">Deployed and Maintained with:</h3>
-          <div class="container my-3">
-            <div class="row">
-              <a class="col-sm-auto shadow-sm bg-white link-unstyled m-md-2 skillDiv" *ngFor="let tools of project.deploymentTools" href="{{ tools.href }}" target="_blank">
-                <p class="m-3 ">{{ tools.name }}</p>
-              </a>
+          <div *ngFor="let heading of project.body;">
+            <h3>{{heading.headTitle}}</h3>
+            <div class="container my-3">
+              <div class="row">
+                <a class="col-sm-auto shadow-sm bg-white link-unstyled m-md-2 skillDiv" *ngFor="let tool of heading.tools;" [href]="tool.href" target="_blank">
+                  <p class="m-3 ">{{ tool.name }}</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!--<div class="py-5 bg-light-secondary">-->
-    <!--<div class="container">-->
-      <!--<div class="row">-->
-        <!--<div class="col-lg-8 mx-auto" *ngFor="let skill of skills.responseJSON">-->
-          <!--<h2>{{ skill.name }}</h2>-->
-          <!--<div class="container my-3">-->
-            <!--<div class="row">-->
-              <!--<a class="col-sm-auto shadow-sm bg-white link-unstyled m-md-2 skillDiv" *ngFor="let localSkill of skill.skills" href="{{ localSkill.href }}" target="_blank">-->
-                <!--<p class="m-3 ">{{ localSkill.name }}</p>-->
-              <!--</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
 </div>

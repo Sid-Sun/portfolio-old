@@ -7,13 +7,27 @@ declare var $:any;
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-  projects: { responseJSON: { name: string, description: string, developmentTools: { name: string, href: string }[], deploymentTools: { name: string, href: string }[] }[] };
+  projects: {
+    responseJSON: {
+      name: string,
+      description: string,
+      body: {
+        headTitle: string,
+        tools: {
+          name: string,
+          href: string
+        }[]
+      }[]
+    }[]
+  };
   constructor() { }
 
   ngOnInit() {
-    this.projects = $.getJSON('https://eowyn.strangebits.co.in/projects.json', (data) => {
+    window.scrollTo(0, 0);
+    this.projects = $.getJSON('https://cdn.sidsun.com/projects.json', (data) => {
       return data;
     });
+    console.log(this.projects);
     $(document).ready(() => {
       $('.skillDiv').hover(function () {
           $(this).addClass('shadow');

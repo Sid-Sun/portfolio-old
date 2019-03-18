@@ -10,7 +10,8 @@ export class SkillsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.skills = $.getJSON('https://eowyn.strangebits.co.in/skills.json', (data) => {
+    window.scrollTo(0, 0);
+    this.skills = $.getJSON('https://cdn.sidsun.com/skills.json', (data) => {
       return data;
     });
     $(document).ready(() => {
