@@ -1,0 +1,20 @@
+<div id="home">
+  <header class="tableView text-black-75 py-5" id="intro">
+    <div class="text-center">
+      <div class="container text-center align-content-center">
+        <h2>{{ faqs.responseJSON.header.title }}</h2>
+        <h4>{{ faqs.responseJSON.header.description }}</h4>
+      </div>
+    </div>
+  </header>
+  <div id="objective" class="py-5 tableView" *ngFor="let faq of faqs.responseJSON.body">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>{{ faq.question }}</h2>
+          <p class="lead">{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

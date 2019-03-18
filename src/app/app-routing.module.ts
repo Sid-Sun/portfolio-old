@@ -6,6 +6,7 @@ import {SocialComponent} from './social/social.component';
 import {SkillsComponent} from './skills/skills.component';
 import {NotfoundComponent} from './notfound/notfound.component';
 import {PolicyComponent} from './policy/policy.component';
+import {FaqComponent} from './faq/faq.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,9 @@ const routes: Routes = [
   },
   {
     path: 'skills', component: SkillsComponent
+  },
+  {
+    path: 'faq', component: FaqComponent
   },
   {
     path: 'socials', component: SocialComponent

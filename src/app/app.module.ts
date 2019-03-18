@@ -10,6 +10,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SocialComponent } from './social/social.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PolicyComponent } from './policy/policy.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PolicyComponent } from './policy/policy.component';
     ProjectsComponent,
     SocialComponent,
     NotfoundComponent,
-    PolicyComponent
+    PolicyComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
