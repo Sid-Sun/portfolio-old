@@ -15,11 +15,16 @@
           <div *ngFor="let heading of project.body;">
             <h3>{{heading.headTitle}}</h3>
             <div class="container my-3">
-              <div class="row">
-                <a class="col-sm-auto shadow-sm bg-white link-unstyled m-md-2 skillDiv" *ngFor="let tool of heading.tools;" [href]="tool.href" target="_blank">
-                  <p class="m-3 ">{{ tool.name }}</p>
+              <div class="row d-flex justify-content-lg-start justify-content-md-center">
+                <a class="skillDiv col-sm-auto shadow-sm bg-white link-unstyled mx-2 my-sm-2" *ngFor="let tool of heading.tools;" [href]="tool.href" target="_blank">
+                  <p class="m-3">{{ tool.name }}</p>
                 </a>
               </div>
+              <!-- <div class="row">
+                <a class="skillDiv col-sm-auto shadow-sm bg-white link-unstyled m-md-2" *ngFor="let tool of heading.tools;" [href]="tool.href" target="_blank">
+                  <p class="m-3 ">{{ tool.name }}</p>
+                </a>
+              </div> -->
             </div>
           </div>
         </div>

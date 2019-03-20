@@ -14,6 +14,7 @@ export class SocialComponent implements OnInit {
     this.socials = $.getJSON('https://cdn.sidsun.com/social.json', (data) => {
       return data;
     });
+    console.log(this.socials);
     $(document).ready(() => {
       $('.skillDiv').hover(function () {
           $(this).addClass('shadow');
@@ -21,5 +22,6 @@ export class SocialComponent implements OnInit {
         function() {
           $(this).removeClass('shadow');
         });
-    });  }
+    });
+  }
 }

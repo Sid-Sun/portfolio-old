@@ -12,10 +12,15 @@
         <div class="col-lg-8 mx-auto" *ngFor="let skill of skills.responseJSON">
           <h2>{{ skill.name }}</h2>
           <div class="container my-3">
-            <div class="row">
-                <a class="col-sm-auto shadow-sm bg-white link-unstyled m-md-2 skillDiv" *ngFor="let localSkill of skill.skills" [href]="localSkill.href" target="_blank">
+            <div class="row d-flex justify-content-lg-start justify-content-md-center">
+              <a class="skillDiv col-sm-auto shadow-sm bg-white link-unstyled mx-2 my-sm-2" *ngFor="let localSkill of skill.skills" [href]="localSkill.href" target="_blank">
+                <p class="m-3">{{ localSkill.name }}</p>
+              </a>
+            <!-- <div class="row">
+                <a class="skillDiv col-sm-auto shadow-sm bg-white link-unstyled m-md-2" *ngFor="let localSkill of skill.skills" [href]="localSkill.href" target="_blank">
                     <p class="m-3 ">{{ localSkill.name }}</p>
                 </a>
+            </div> -->
             </div>
           </div>
         </div>

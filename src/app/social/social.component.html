@@ -1,5 +1,5 @@
 <div id="socials">
-  <header class="bg-light-secondary text-black-75 py-5">
+  <div class="tableView text-black-75 py-5">
     <div class="text-center">
       <div class="container text-center align-content-center">
         <h2>You can find me on the internet at:</h2>
@@ -13,8 +13,8 @@
               <h2 class="mt-4">Sid Sun (Sidharth Soni)</h2>
               <p class="h3 my-3">Feel free to get in touch if you'd like to talk, or; follow me!</p>
               <div class="mt-md-3 mt-sm-3">
-                <div class="row list-inline">
-                  <a class="col-sm-auto mx-md-auto shadow-sm bg-white px-md-0 px-lg-2 link-unstyled skillDiv" *ngFor="let social of socials.responseJSON" href="{{ social.href }}" target="_blank">
+                <div class="row d-flex justify-content-lg-start justify-content-md-center">
+                  <a class="skillDiv col-sm-auto shadow-sm bg-white link-unstyled mx-2 my-sm-2" *ngFor="let social of socials.responseJSON" href="{{ social.href }}" target="_blank">
                     <p class="m-3"><span class="{{ social.icon }} "></span> {{ social.name }}</p>
                   </a>
                 </div>
@@ -24,5 +24,30 @@
         </div>
       </div>
     </div>
-  </header>
+  </div>
+  <!-- <div class="tableView text-black-75 py-5">
+    <div class="text-center">
+      <div class="container text-center align-content-center">
+        <h2>Or, drop a word!</h2>
+        <small class="form-text text-muted">Powered by Formspree</small>
+        <br>
+        <div class="row px-2">
+          <form action="https://formspree.io/sid@sidsun.com" method="post" class="mx-auto text-left">
+            <div class="form-group">
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" placeholder="Name">
+              <small id="nameHelp" class="form-text text-muted">Please feel free to leave this blank if you wish don't wish to disclose your name.</small>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="exampleInputPassword1" name="email" placeholder="Email">
+              <small id="emailHelp" class="form-text text-muted">Please feel free to leave this blank if you wish don't wish to disclose your email, if used it'll only be to reply to your message.</small>
+            </div>
+            <div class="form-group pl-0">
+              <textarea rows="4" name="message" class="form-control" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn bg-purple-primary skillDiv shadow-sm text-white">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div> DELAYED DUE TO POLICY UPDATE 7 days prior to introduction
+  </div> -->
 </div>
