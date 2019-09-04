@@ -117,3 +117,6 @@
     max-width: inherit;
   }
 }
+a {
+  outline: 0;
+}
